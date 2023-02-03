@@ -98,7 +98,8 @@ class Scraper:
 
     @staticmethod
     def _is_challenge_page(r):
-        if "Checking your browser before accessing kiwifarms.net" in r.text:
+        if "Checking your browser before accessing kiwifarms.net" in r.text \
+                and r.text.startswith('<!DOCTYPE html>\r\n<html class="no-js">\r\n\r\n<head>\r\n    <title>Just a moment...</title>\r\n'):
             return True
         return False
 
