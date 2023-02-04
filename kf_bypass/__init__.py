@@ -90,7 +90,7 @@ class Scraper:
                     self.logger.info(f"Solve challenge, clearance cookie: {clearance}")
 
             else:
-                logger.error(f"Could not solve challenge: {r2.text}")
+                self.logger.error(f"Could not solve challenge: {r2.text}")
 
             return self.get(url, **kwargs)
 
